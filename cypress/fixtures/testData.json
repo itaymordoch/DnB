@@ -1,19 +1,31 @@
 {
   "homepageURL": "https://www.amazon.com",
-  
-  "expectedLinks": {
-    "Today's Deals": "/gp/goldbox",
-    "Prime Video": "/Amazon-Video",
-    "Registry": "/gp/browse.html",
-    "Customer Service": "/gp/help/customer/display.html",
-    "Gift Cards": "/gift-cards",
-    "Sell": "b/?_encoding=UTF8&ld=AZUSSOA-sell&node=12766669011&ref_=nav_cs_sell"
-  },
 
-  "searchQuery": "where is my stuff",
+  "task2":{
+    
+    "expectedLinks": {
+      "Today's Deals": "/gp/goldbox",
+      "Prime Video": "/Amazon-Video",
+      "Registry": "/gp/browse.html",
+      "Customer Service": "/gp/help/customer/display.html",
+      "Gift Cards": "/gift-cards",
+      "Sell": "b/?_encoding=UTF8&ld=AZUSSOA-sell&node=12766669011&ref_=nav_cs_sell"
+    },
 
-  "expectedTitles": {
-    "customerService": "Help & Contact Us - Amazon Customer Service",
-    "wheresMyStuff": "Where's My Stuff? - Amazon Customer Service"
+    "searchQuery": "where is my stuff",
+
+    "expectedTitles": {
+      "customerService": "Help & Contact Us - Amazon Customer Service",
+      "wheresMyStuff": "Where's My Stuff? - Amazon Customer Service"
+    }
+ },
+  "task3": {
+    "scissorsURL": "https://www.amazon.com/Scissors-iBayam-Crafting-Scrapbooking-Knitting/dp/B07H3QKN2Z",
+    "scissorsDesiredColor": "Red, Black, Blue",
+    "searchItems": 
+    ["Powerful Stall-Free Motor", "High Capacity Shavings Tray", "Gray (EPS4-KTGRAY)", "Bostitch Office Personal Electric Pencil Sharpener"],
+     "scissorsColorImageURL": "https://m.media-amazon.com/images/I/6184VjFHHmS._AC_SX679_.jpg",
+     "qualifiedMsg": "Your order qualifies",
+     "notQualifiedMsg": "Add"
   }
 }

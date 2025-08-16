@@ -1,5 +1,5 @@
 import pageObjects from '../fixtures/pageObjects.json';
-import testData from '../fixtures/testData.json';
+import { task2 as testData } from '../fixtures/testData.json';
 
 
 describe('Validate Amazon top nav links', () => {
@@ -28,8 +28,8 @@ describe('Validate Amazon top nav links', () => {
     cy.get(pageObjects.nav.customerServiceLink).click({ scrollBehavior: false });
     cy.title().should('eq', testData.expectedTitles.customerService);
     
-    cy.get(pageObjects.search.input).type('where is my stuff{enter}');
-    cy.get(pageObjects.search.wheresMyStuffLink).click();
+    cy.get(pageObjects.customerServiceSearch.input).type('where is my stuff{enter}');
+    cy.get(pageObjects.customerServiceSearch.wheresMyStuffLink).click();
     cy.title().should('eq', testData.expectedTitles.wheresMyStuff);
 
 

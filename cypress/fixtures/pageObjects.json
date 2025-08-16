@@ -3,14 +3,46 @@
     "navBar": "#nav-xshop",
     "topLinks": "ul.nav-ul a",
     "customerServiceLink": ".nav-li a:contains('Customer Service')",
-    "logo": "#nav-bb-logo"
+    "logo": "#nav-bb-logo",
+    "deliverTo": "#nav-global-location-popover-link",
+    "selectedLocation": "#glow-ingress-line2"
   },
   "toaster": {
     "container": "div[role='alertdialog']",
     "dismissButton": "input[data-action-type='DISMISS']"
   },
-  "search": {
+  "customerServiceSearch": {
     "input": "#hubHelpSearchInput",
     "wheresMyStuffLink": "a:contains('Where\\'s My Stuff?')"
+  },
+  "productSearch": {
+    "searchResults": "div[role='listitem']",
+    "input": "#twotabsearchtextbox",
+    "search": "nav-search-submit-button",
+    "resultsHeader": "h2:contains('Results')"
+  },
+  "deliverToModal": {
+    "modal": ".a-popover-wrapper.GLUX_Popover",
+    "header": "#a-popover-header-1",
+    "countryDropdown": "#GLUXCountryValue",
+    "hongKongOption": "a:contains('Hong Kong')",
+    "doneButton": "button:contains('Done')"
+  },
+  "cart": {
+    "addToCart": "#add-to-cart-button",
+    "openCart": "#nav-cart",
+    "addedToCartMessage": "h4:contains('Added to cart')",
+    "addedToCartDismiss" : "#attach-close_sideSheet-link",
+    "cartCounter": "#nav-cart-count",
+    "removeItem": "input[data-feature-id='item-delete-button']",
+    "emptyCartMessage": "h3.sc-your-amazon-cart-is-empty",
+    "shippingStatus": "p[role='status']",
+    "incrementQuantity": "span[data-a-selector='increment-icon']"
+  },
+  "scissors": {
+    "desiredColor": ".a-list-item #color_name_5",
+    "selectedColorText": "#inline-twister-expanded-dimension-text-color_name",
+    "desiredColorImage": "#main-image-container .imgTagWrapper img"
   }
+
 }
