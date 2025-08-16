@@ -1,5 +1,16 @@
 {
-  "name": "Using fixtures to represent data",
-  "email": "hello@cypress.io",
-  "body": "Fixtures are a great way to mock data for responses to routes"
+  "nav": {
+    "navBar": "#nav-xshop",
+    "topLinks": "ul.nav-ul a",
+    "customerServiceLink": ".nav-li a:contains('Customer Service')",
+    "logo": "#nav-bb-logo"
+  },
+  "toaster": {
+    "container": "div[role='alertdialog']",
+    "dismissButton": "input[data-action-type='DISMISS']"
+  },
+  "search": {
+    "input": "#hubHelpSearchInput",
+    "wheresMyStuffLink": "a:contains('Where\\'s My Stuff?')"
+  }
 }

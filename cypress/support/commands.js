@@ -1,25 +1,26 @@
-// ***********************************************
-// This example commands.js shows you how to
-// create various custom commands and overwrite
-// existing commands.
-//
-// For more comprehensive examples of custom
-// commands please read more here:
-// https://on.cypress.io/custom-commands
-// ***********************************************
-//
-//
-// -- This is a parent command --
-// Cypress.Commands.add('login', (email, password) => { ... })
-//
-//
-// -- This is a child command --
-// Cypress.Commands.add('drag', { prevSubject: 'element'}, (subject, options) => { ... })
-//
-//
-// -- This is a dual command --
-// Cypress.Commands.add('dismiss', { prevSubject: 'optional'}, (subject, options) => { ... })
-//
-//
-// -- This will overwrite an existing command --
-// Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+import pageObjects from '../fixtures/pageObjects.json';
+import testData from '../fixtures/testData.json';
+
+Cypress.Commands.add('visitAmazon', () => {
+  cy.visit(testData.homepageURL, { failOnStatusCode: false });
+
+  //reload if no navBar is found
+  cy.get('body').then($body => {
+    if ($body.find(pageObjects.nav.navBar).length === 0) {
+      cy.get(pageObjects.nav.logo).click();
+    }
+  });
+});
+
+Cypress.Commands.add('dismissToasterIfVisible', () => {
+  cy.get(pageObjects.toaster.container, { timeout: 5000 }).then($toaster => {
+      if ($toaster.length) {
+        cy.wrap($toaster)
+          .find(pageObjects.toaster.dismissButton)
+          .click();
+        cy.wrap($toaster).should('not.exist');
+
+      } 
+    });
+    cy.scrollTo('top');
+});
